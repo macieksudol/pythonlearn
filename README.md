@@ -1,13 +1,14 @@
 # pythonlearn
-#funkcja generująca ciąg fibonacciego
+#proste wykresy
 
-def fibbo(n):
-    a = 0
-    b = 1
-    for x in range(1,n+1):
-        print(b)
-        b=a+b
-        a=b-a
+import matplotlib.pyplot as plt
+import math as m
+tab=[]
+z=0
+for x in range(1,300):
+    tab.append(m.sin(z+3.14)+2)
+    z=z+0.1
 
-y= int(input('podaj liczbe wyrazów ciągu fibbonaciego  '))
-fibbo(y)
+plt.plot(tab,color='r')
+plt.grid( linestyle='-', linewidth=1)
+plt.show()
