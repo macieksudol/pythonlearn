@@ -1,4 +1,19 @@
 # pythonlearn
-this repo is made to learn python basics
+#prosta tablica
 
-E-learning, and since today i'll be updating some basic examples of python language, bla bla bla
+#proste zapisywanie wartosci i wypisywanie tablicy(2 sposoby)
+tab=[]
+for a in range(1,11):
+    print('give me number:')
+    tab.append(input())
+
+print(tab)
+
+#or better version:
+
+for a in range(1,11,1):
+    print(tab[a-1])
+    
+#end to  start:
+for a in range(1,11,1):
+    print(tab[10-a])
