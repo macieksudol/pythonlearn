@@ -1,14 +1,22 @@
 # pythonlearn
-#proste wykresy
-
-import matplotlib.pyplot as plt
-import math as m
+#prosta funkcja kwadratowa bez zespolonych
 tab=[]
 z=0
-for x in range(1,300):
-    tab.append(m.sin(z+3.14)+2)
-    z=z+0.1
 
-plt.plot(tab,color='r')
-plt.grid( linestyle='-', linewidth=1)
-plt.show()
+print('wpisz parametry równania kwadratowego a*x^2 + b*x + c')
+a= float(input())
+b= float(input())
+c= float(input())
+
+if b*b-4*a*c>0:
+    print('delta dodatnia - 2 pierwiastki')
+    x1 = float((-b - m.sqrt(b * b - 4 * a * c)) / (2*a))
+    x2 = float((-b + m.sqrt(b * b - 4 * a * c)) / (2*a))
+    print('x1 = ',x1,' x2 = ',x2)
+
+elif b * b - 4 * a * c < 0:
+    print('delta ujemna - pierwiastki zespolone')
+else:
+    print('delta równa zero - jeden pierwiastek')
+    x=float(-b/(2*a))
+    print('x = ',x)
