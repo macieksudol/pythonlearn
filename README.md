@@ -1,12 +1,13 @@
 # pythonlearn
-#silnia rekurencyjna
+#funkcja generująca ciąg fibonacciego
 
-def silnia(n):
-    if n>1:
-        return n*silnia(n-1)
-    else:
-        return 1
+def fibbo(n):
+    a = 0
+    b = 1
+    for x in range(1,n+1):
+        print(b)
+        b=a+b
+        a=b-a
 
-a= float(input('podaj liczbe do obliczenia silni'))
-
-print('silnia wynosi :',silnia(a))
+y= int(input('podaj liczbe wyrazów ciągu fibbonaciego  '))
+fibbo(y)
